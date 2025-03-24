@@ -35,6 +35,10 @@
         padding: theme('spacing.1');
         font-size: 18px;
     }
+    strong{
+        padding: theme('spacing.1');
+        font-size: 18px;
+    }
     img{
         width:  1000px;
         margin: 10px auto;
@@ -63,8 +67,10 @@
         @apply text-xl font-bold mb-3 pt-10
     }
     .toc{
-        @apply hidden lg:block w-64 h-screen fixed top-0 right-0 p-5 overflow-y-auto ;
+        @apply hidden lg:block h-screen fixed top-0 right-0 p-5 overflow-y-auto ;
+        width: 300px;
     }
+
     .onclick{
         @apply block w-full text-left hover:px-2 py-1 rounded hover:transition-all duration-200;
     }
@@ -79,7 +85,10 @@
                hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-500;
       }
 
+    /*detail*/
     .data-detail {
         @apply ml-5;
     }
+
+
   }

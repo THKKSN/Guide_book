@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const TOCMaintenance = () => {
+const  TOCExpense = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -14,7 +14,7 @@ const TOCMaintenance = () => {
           }
         });
       },
-      { threshold: 0.6 } // Section ต้องแสดง 60% ถึงจะถือว่าเป็น Active
+      { threshold: 0.6 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -24,12 +24,11 @@ const TOCMaintenance = () => {
     };
   }, []);
 
-  // เมื่อคลิก TOC ให้ Scroll ไปยัง Section ที่ต้องการ
   const handleClick = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setActiveSection(id); // อัปเดต State ทันทีเมื่อคลิก
+      setActiveSection(id);
     }
   };
 
@@ -37,15 +36,26 @@ const TOCMaintenance = () => {
     <div className="toc">
       <h2 className="head-on-this-page">On this page</h2>
       <ul className=" space-y-2">
-        {["overview", "dashboard", "job-order management","accessing-job orders","createing-a new job order"].map((id) => (
+        {[
+          "overview",
+          "dashboard",
+          "managing-expenses",
+          "accessing-expense list",
+          "createing-new expenses",
+          "method 1 : manual entry",
+          "method 2 : bulk import via excel",
+          "excel-template format"
+
+          
+        ].map((id) => (
           <li key={id}>
             <button
               onClick={() => handleClick(id)}
-              className={`onclick ${
-                activeSection === id ? "click" : ""
-              }`}
+              className={`onclick ${activeSection === id ? "click" : ""}`}
             >
-              {id.replace("-", " ").replace(/\b\w/g, (char) => char.toUpperCase())}
+              {id
+                .replace("-", " ")
+                .replace(/\b\w/g, (char) => char.toUpperCase())}
             </button>
           </li>
         ))}
@@ -54,4 +64,4 @@ const TOCMaintenance = () => {
   );
 };
 
-export default TOCMaintenance;
+export default TOCExpense;

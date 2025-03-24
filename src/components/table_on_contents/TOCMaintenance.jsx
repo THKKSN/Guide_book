@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-const TOCGuilde = () => {
+const TOCMaintenance = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -37,15 +37,21 @@ const TOCGuilde = () => {
     <div className="toc">
       <h2 className="head-on-this-page">On this page</h2>
       <ul className=" space-y-2">
-        {["overview", "system-architecture", "getting-started","accessing-the system","system-interface"].map((id) => (
+        {[
+          "overview",
+          "dashboard",
+          "job-order management",
+          "accessing-job orders",
+          "createing-a new job order",
+        ].map((id) => (
           <li key={id}>
             <button
               onClick={() => handleClick(id)}
-              className={`onclick ${
-                activeSection === id ? "font-bold  bg-blue-100 dark:bg-blue-700 p-2" : ""
-              }`}
+              className={`onclick ${activeSection === id ? "click" : ""}`}
             >
-              {id.replace("-", " ").replace(/\b\w/g, (char) => char.toUpperCase())}
+              {id
+                .replace("-", " ")
+                .replace(/\b\w/g, (char) => char.toUpperCase())}
             </button>
           </li>
         ))}
@@ -54,4 +60,4 @@ const TOCGuilde = () => {
   );
 };
 
-export default TOCGuilde;
+export default TOCMaintenance;

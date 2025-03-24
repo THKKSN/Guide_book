@@ -1,19 +1,17 @@
 import React, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import TOCGuilde from "../TOC/TOCUserGuide";
+import TOCGuilde from "../table_on_contents/TOCUserGuide";
 import NextButton from "../functions/NextButtons";
-const UserGuide = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
+import { scrollToSection } from "../functions/ScrollToSection";
 
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.getElementById(location.hash.replace("#", ""));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  }, [location]);
+const UserGuide = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        scrollToSection(location); 
+    }, [location]);
+
   return (
     <div className="main-page">
       <h1>SMMS User Guide</h1>
@@ -36,7 +34,7 @@ const UserGuide = () => {
         The SMMS system follows a structured workflow that integrates various
         modules for efficient management of business operations.
       </p>
-      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_085800.png" />
+      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_085800.png" alt=""/>
       <div className="under-pic">Figure 1: SMMS System Flow Diagram</div>
       <h3 id="getting-started">Getting Started</h3>
       <h4 id="accessing-the system"> Accessing the System</h4>
@@ -45,7 +43,7 @@ const UserGuide = () => {
       <p>2. Enter your credentials: Username & Password</p>
       <p>3. Select your preferred language</p>
       <p>4. Click the Login button to access the system</p>
-      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_090108.png" />
+      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_090108.png" alt=""/>
       <div className="under-pic">Figure 2: SMMS Login Interface</div>
       <h4 id="system-interface">System Interface</h4>
       <h5>Main Dashboard Layout</h5>

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { FaBars, FaWarehouse, FaBookOpen, FaTools  } from "react-icons/fa";
 import { IoDocumentSharp } from "react-icons/io5";
 import DarkModeToggle from "../functions/DarkModeToggle";
+import { HiDocumentCurrencyDollar,HiDocumentCheck } from "react-icons/hi2";
+import { SiExpensify } from "react-icons/si";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +42,21 @@ const Navbar = () => {
             <li>
               <Link to="/procurement" onClick={handleClickGoTop} className="flex items-center space-x-2">
                 <IoDocumentSharp /> <span>Procurement</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/accounting" onClick={handleClickGoTop} className="flex items-center space-x-2">
+                <HiDocumentCurrencyDollar /> <span>Accounting</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/Approved" onClick={handleClickGoTop} className="flex items-center space-x-2">
+                <HiDocumentCheck /> <span>Approved</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/expense_management" onClick={handleClickGoTop} className="flex items-center space-x-2">
+                <SiExpensify /> <span>Expense management</span>
               </Link>
             </li>
           </ul>

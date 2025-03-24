@@ -2,19 +2,17 @@ import React, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import BackButton from "../functions/BackButton";
 import NextButton from "../functions/NextButtons";
-import TOCProcurement from "../TOC/TOCProcurement";
+import TOCProcurement from "../table_on_contents/TOCProcurement";
+import { scrollToSection } from "../functions/ScrollToSection";
+
 const ProcurementPage = () => {
-    const navigate = useNavigate();
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
-        if (location.hash) {
-            const element = document.getElementById(location.hash.replace("#", ""));
-            if (element) {
-                element.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
-        }
+        scrollToSection(location);
     }, [location]);
+
     return (
         <div className="main-page">
             <h1>Procurement Management System</h1>
@@ -32,11 +30,14 @@ const ProcurementPage = () => {
             <h4>Creating New Purchase Request</h4>
             <p>1. Click "New PR" button to initiate a new request</p>
             <p>2. Fill in the required information :</p>
-            <p className="data-detail">- Order Type</p>
-            <p className="data-detail">- Job Order Number (if applicable)</p>
-            <p className="data-detail">- Add Product details (via NewItem button)</p>
-            <p className="data-detail">- Quantity and ETA</p>
-            <p className="data-detail">- Requester information</p>
+            <div className="data-detail">
+                <p>- Order Type</p>
+                <p>- Job Order Number (if applicable)</p>
+                <p>- Add Product details (via NewItem button)</p>
+                <p>- Quantity and ETA</p>
+                <p>- Requester information</p>
+            </div>
+
             <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_094820.png" alt="" />
             <div className="under-pic">Figure 2: Purchase Request Creation Form</div>
             <h4>Reviewing PR Status</h4>
@@ -54,9 +55,12 @@ const ProcurementPage = () => {
             <h4 id="creating-new purchase order">Creating New Purchase Order</h4>
             <p>1. Click "New PO" button from the Procurement List</p>
             <p>2. Complete the PO form with required details:</p>
-            <p className="data-detail">- Authorization Level selection (1-3)</p>
-            <p className="data-detail">- Supporting documents (images/PDF)</p>
-            <p className="data-detail">- Related PR information</p>
+            <div className="data-detail">
+                <p>- Authorization Level selection (1-3)</p>
+                <p>- Supporting documents (images/PDF)</p>
+                <p>- Related PR information</p>
+            </div>
+
             <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_095455.png" alt="" />
             <div className="under-pic">Figure 6: Purchase Order Creation</div>
             <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_095530.png" alt="" />

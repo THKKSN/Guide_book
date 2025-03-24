@@ -1,21 +1,17 @@
 import React, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import TOCMaintenance from "../TOC/TOCMaintenance";
+import TOCMaintenance from "../table_on_contents/TOCMaintenance";
 import NextButton from "../functions/NextButtons";
 import BackButton from "../functions/BackButton";
+import { scrollToSection } from "../functions/ScrollToSection";
 
 const Maintenance = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
+    const location = useLocation();
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    if (location.hash) {
-      const element = document.getElementById(location.hash.replace("#", ""));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  }, [location]);
+    useEffect(() => {
+        scrollToSection(location); 
+    }, [location]);
 
   return (
     <div className="main-page">

@@ -1,11 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Layout/SideBar";
-import Navbar from "./components/Layout/NavBar";
+import Sidebar from "./components/layouts/SideBar";
+import Navbar from "./components/layouts/NavBar";
 import UserGuidePage from "./components/page/UserGuidePage";
 import Maintenance from "./components/page/MaintenancePage";
 import Warehouse from "./components/page/WarehousePages";
 import Procurement from "./components/page/ProcurementPage";
+import Accounting from "./components/page/AccountingPage";
+import Appoved from "./components/page/ApprovedPage";
+import Expense from "./components/page/ExpenseManagementPage";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
             <Route path="/maintenance" element={<Maintenance />} />
             <Route path="/warehouse" element={<Warehouse />}/>
             <Route path="/procurement" element={<Procurement />}/>
+            <Route path="/accounting" element={<Accounting />} />
+            <Route path="/approved" element={<Appoved/>} />
+            <Route path="/expense_management" element={<Expense />}/>
           </Routes>
         </div>
       </div>

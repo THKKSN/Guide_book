@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaWarehouse,FaBookOpen,FaTools  } from "react-icons/fa";
 import { IoDocumentSharp } from "react-icons/io5";
+import { HiDocumentCurrencyDollar,HiDocumentCheck } from "react-icons/hi2";
 import DarkModeToggle from "../functions/DarkModeToggle";
+import { SiExpensify } from "react-icons/si";
 
 const Sidebar = () => {
   const handleClickGoTop = () => {
@@ -32,6 +34,21 @@ const Sidebar = () => {
           <li>
             <Link to="/procurement" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
               <IoDocumentSharp /> <span>Procurement</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/accounting" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
+              <HiDocumentCurrencyDollar /> <span>Accounting</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/approved" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
+              <HiDocumentCheck /> <span>Approved</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/expense_management" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
+              <SiExpensify /> <span>Expense Management</span>
             </Link>
           </li>
         </ul>
