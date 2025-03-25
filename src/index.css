@@ -2,93 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @layer base {
-    *{
-        font-family: "Inter", sans-serif;
-        font-optical-sizing: auto;
-    }
+  * {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+  }
 
-    h1{
-        font-size: theme('fontSize.4xl'); 
-        font-weight: theme('fontWeight.bold'); 
-    }
-    h3 {
-        font-size: theme('fontSize.3xl'); 
-        font-weight: theme('fontWeight.bold'); 
-        padding-top: theme('spacing.4'); 
-    }
-    h4{
-        font-size: theme('fontSize.2xl'); 
-        font-weight: theme('fontWeight.bold');
-        padding-top: theme('spacing.3'); 
-        padding-bottom: theme('spacing.3'); 
-
-    }
-    h5{
-        font-weight: theme('fontWeight.bold');
-        padding-bottom: theme('spacing.1'); 
-        font-size: 20px;
-    }
-    p{
-        padding: theme('spacing.1');
-        font-size: 18px;
-    }
-    strong{
-        padding: theme('spacing.1');
-        font-size: 18px;
-    }
-    img{
-        width:  1000px;
-        margin: 10px auto;
-    }
-    hr{
-        height: 2px;
-        color: #aaa;
-        background: #aaa;
-        font-size: 0;
-        border: 0;
-        margin-top:30px; 
-    }
+  h1 {
+    font-size: theme("fontSize.4xl");
+    font-weight: theme("fontWeight.bold");
+  }
+  h3 {
+    font-size: theme("fontSize.3xl");
+    font-weight: theme("fontWeight.bold");
+    padding-top: theme("spacing.4");
+  }
+  h4 {
+    font-size: theme("fontSize.2xl");
+    font-weight: theme("fontWeight.bold");
+    padding-top: theme("spacing.3");
+    padding-bottom: theme("spacing.3");
+  }
+  h5 {
+    font-weight: theme("fontWeight.bold");
+    padding-bottom: theme("spacing.1");
+    font-size: 20px;
+  }
+  p {
+    padding: theme("spacing.1");
+    font-size: 18px;
+  }
+  strong {
+    padding: theme("spacing.1");
+    font-size: 18px;
+  }
+  img {
+    width: 1000px;
+    margin: 10px auto;
+  }
+  hr {
+    height: 2px;
+    color: #aaa;
+    background: #aaa;
+    font-size: 0;
+    border: 0;
+    margin-top: 30px;
+  }
 }
 
 @layer utilities {
-    /* page */
-    .under-pic {
-      @apply text-center italic text-sm;
-    }
-    .main-page{
-        @apply flex flex-col min-h-screen pt-5;
-    }
-
-    /* table on content*/
-    .head-on-this-page{
-        @apply text-xl font-bold mb-3 pt-10
-    }
-    .toc{
-        @apply hidden lg:block h-screen fixed top-0 right-0 p-5 overflow-y-auto ;
-        width: 300px;
-    }
-
-    .onclick{
-        @apply block w-full text-left hover:px-2 py-1 rounded hover:transition-all duration-200;
-    }
-    .click{
-        @apply font-bold  bg-blue-100 dark:bg-blue-700 p-2;
-    }
-    /* Next button */
-    .next-button {
-        @apply flex items-center justify-between px-6 py-3 w-1/2 mt-10
-               bg-blue-500 text-white font-medium text-lg 
-               rounded-lg shadow-lg cursor-pointer transition-all duration-300 
-               hover:bg-blue-600 dark:bg-blue-700 dark:hover:bg-blue-500;
-      }
-
-    /*detail*/
-    .data-detail {
-        @apply ml-5;
-    }
-
-
+  /* page */
+  .under-pic {
+    @apply text-center italic text-sm;
   }
+  .main-page {
+    @apply flex flex-col min-h-screen pt-5;
+  }
+
+  /* table on content*/
+  .head-on-this-page {
+    @apply text-xl font-bold mb-3 pt-10;
+  }
+  .toc {
+    @apply hidden lg:block h-screen fixed top-0 right-0 p-5 overflow-y-auto;
+    width: 300px;
+  }
+
+  .onclick {
+    @apply block w-full text-left hover:px-2 py-1 rounded hover:transition-all duration-200;
+  }
+  .click {
+    @apply font-bold  bg-blue-300 dark:bg-purple-400 p-2;
+  }
+
+  /* Next button */
+  .div-button {
+    @apply grid grid-cols-2 gap-4 sm:gap-10 w-full mt-10 auto-cols-fr;
+  }
+
+  .next-button, .back-button {
+    @apply flex flex-col items-center justify-center text-center w-full px-6 py-3 min-h-16
+           border-2 border-gray-300 text-black font-medium text-lg 
+           rounded-lg shadow-lg cursor-pointer transition-all duration-300 
+           hover:border-solid hover:border-blue-300 hover:dark:border-purple-50 
+           dark:bg-purple-400 dark:text-white dark:hover:bg-purple-600;
+  }
+
+  /*detail*/
+  .data-detail {
+    @apply ml-5;
+  }
+}

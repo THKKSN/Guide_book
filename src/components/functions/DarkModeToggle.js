@@ -23,12 +23,12 @@ const DarkModeToggle = () => {
 
       {/* Slide Switch */}
       <div
-        className={`w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full p-1 cursor-pointer`}
+        className={`w-12 h-6 flex items-center bg-gray-300 dark:bg-purple-300 rounded-full p-1 cursor-pointer`}
         onClick={() => setDarkMode(!darkMode)}
       >
         <div
-          className={`bg-white dark:bg-gray-900 w-5 h-5 rounded-full shadow-md transform duration-300 ${
-            darkMode ? "translate-x-6" : "translate-x-0"
+          className={`bg-white dark:bg-purple-900 w-5 h-5 rounded-full shadow-md transform duration-300 ${
+            darkMode ? "translate-x-5" : "translate-x-0"
           }`}
         />
       </div>
