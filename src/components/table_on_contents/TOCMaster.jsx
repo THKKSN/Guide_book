@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const TOCAccounting = () => {
+const TOCMaster = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const TOCAccounting = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setActiveSection(id); 
+      setActiveSection(id);
     }
   };
 
@@ -38,10 +38,21 @@ const TOCAccounting = () => {
       <ul className=" space-y-2">
         {[
           "overview",
-          "accessing-accounting features",
-          "navigate-to accounting list",
-          "available-fetures",
-          "using-the accounting module",
+          "company-detail",
+          "step 1 : add company detail",
+          "step 2 : fill in company information",
+          "company-group",
+          "step 1 : add company grouup",
+          "step 2 : fill company group information",
+          "company-type",
+          "step 1 : add company type",
+          "step 2 : fill in company type information",
+          "company-branch",
+          "step 1 : add company branch",
+          "step 2 : fill in company branch information",
+
+
+
         ].map((id) => (
           <li key={id}>
             <button
@@ -59,4 +70,4 @@ const TOCAccounting = () => {
   );
 };
 
-export default TOCAccounting;
+export default TOCMaster;

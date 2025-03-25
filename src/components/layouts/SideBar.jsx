@@ -5,6 +5,8 @@ import { IoDocumentSharp } from "react-icons/io5";
 import { HiDocumentCurrencyDollar,HiDocumentCheck } from "react-icons/hi2";
 import DarkModeToggle from "../functions/DarkModeToggle";
 import { SiExpensify } from "react-icons/si";
+import { FaTruckMoving ,FaDatabase,FaCarBurst } from "react-icons/fa6";
+
 
 const Sidebar = () => {
   const handleClickGoTop = () => {
@@ -49,6 +51,21 @@ const Sidebar = () => {
           <li>
             <Link to="/expense_management" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
               <SiExpensify /> <span>Expense Management</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/accident_record" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
+              <FaCarBurst /> <span>Accident Record</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/distance" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
+              <FaTruckMoving /> <span>Distance</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/master" onClick={handleClickGoTop} className="flex items-center space-x-2 px-3 py-2 rounded hover:bg-gray-700">
+              <FaDatabase /> <span>Master</span>
             </Link>
           </li>
         </ul>

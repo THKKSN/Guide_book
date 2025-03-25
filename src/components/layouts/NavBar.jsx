@@ -5,6 +5,8 @@ import { IoDocumentSharp } from "react-icons/io5";
 import DarkModeToggle from "../functions/DarkModeToggle";
 import { HiDocumentCurrencyDollar,HiDocumentCheck } from "react-icons/hi2";
 import { SiExpensify } from "react-icons/si";
+import { FaTruckMoving, FaDatabase,FaCarBurst } from "react-icons/fa6";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +59,21 @@ const Navbar = () => {
             <li>
               <Link to="/expense_management" onClick={handleClickGoTop} className="flex items-center space-x-2">
                 <SiExpensify /> <span>Expense management</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/accident_record" onClick={handleClickGoTop} className="flex items-center space-x-2">
+                <FaCarBurst /> <span>Accident Record</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/distance" onClick={handleClickGoTop} className="flex items-center space-x-2">
+                <FaTruckMoving /> <span>Distance</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/master" onClick={handleClickGoTop} className="flex items-center space-x-2">
+                <FaDatabase /> <span>Master</span>
               </Link>
             </li>
           </ul>

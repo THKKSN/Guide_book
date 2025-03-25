@@ -89,7 +89,7 @@ const ProcurementPage = () => {
             <h4 id="report">Report</h4>
             <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_19-2-2025_113048_localhost.jpeg" alt="" />
             <div className="under-pic">Figure 13: Report</div>
-            <div className="flex justify-between gap-10">
+            <div className="div-button">
                 <BackButton text="Back" subtext="Warehouse" onClick={() => navigate("/warehouse")} />
                 <NextButton text="Next" subtext="Accounting" onClick={() => navigate("/accounting")} />
             </div>

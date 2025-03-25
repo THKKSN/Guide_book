@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const TOCAccounting = () => {
+const TOCDistance = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -38,10 +38,7 @@ const TOCAccounting = () => {
       <ul className=" space-y-2">
         {[
           "overview",
-          "accessing-accounting features",
-          "navigate-to accounting list",
-          "available-fetures",
-          "using-the accounting module",
+
         ].map((id) => (
           <li key={id}>
             <button
@@ -59,4 +56,4 @@ const TOCAccounting = () => {
   );
 };
 
-export default TOCAccounting;
+export default TOCDistance;

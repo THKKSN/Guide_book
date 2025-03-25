@@ -14,7 +14,7 @@ const TOCMaintenance = () => {
           }
         });
       },
-      { threshold: 0.6 } // Section ต้องแสดง 60% ถึงจะถือว่าเป็น Active
+      { threshold: 0.6 } 
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -24,12 +24,11 @@ const TOCMaintenance = () => {
     };
   }, []);
 
-  // เมื่อคลิก TOC ให้ Scroll ไปยัง Section ที่ต้องการ
   const handleClick = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setActiveSection(id); // อัปเดต State ทันทีเมื่อคลิก
+      setActiveSection(id); 
     }
   };
 

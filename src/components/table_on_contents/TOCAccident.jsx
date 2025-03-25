@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const TOCAccounting = () => {
+const TOCAccident = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const TOCAccounting = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setActiveSection(id); 
+      setActiveSection(id);
     }
   };
 
@@ -38,10 +38,11 @@ const TOCAccounting = () => {
       <ul className=" space-y-2">
         {[
           "overview",
-          "accessing-accounting features",
-          "navigate-to accounting list",
-          "available-fetures",
-          "using-the accounting module",
+          "create-a new accident record",
+          "1. access accident record",
+          "2. initialize new record",
+          "3. fill in accident details",
+          "4. confirm record creation"
         ].map((id) => (
           <li key={id}>
             <button
@@ -59,4 +60,4 @@ const TOCAccounting = () => {
   );
 };
 
-export default TOCAccounting;
+export default TOCAccident;

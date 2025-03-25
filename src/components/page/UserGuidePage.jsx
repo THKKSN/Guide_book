@@ -57,7 +57,7 @@ const UserGuide = () => {
         alt=""
       />
       <div className="under-pic">Figure 3: SMMS Dashboard Layout</div>
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-10">
         <NextButton text="Next" subtext="Maintenance" onClick={() => navigate("/maintenance")} />
       </div>
     </div>

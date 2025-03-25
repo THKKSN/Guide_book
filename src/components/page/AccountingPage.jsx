@@ -74,7 +74,7 @@ const AccountingPage = () => {
                 <p>- Generate payment reports</p>
                 <p>- Maintain payment records</p>
             </div>
-            <div className="flex justify-between gap-10">
+            <div className="div-button">
                 <BackButton text="Back" subtext="Procurement" onClick={() => navigate("/procurement")} />
                 <NextButton text="Next" subtext="Approved" onClick={() => navigate("/approved")} />
             </div>

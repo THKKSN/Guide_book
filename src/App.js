@@ -9,6 +9,9 @@ import Procurement from "./components/page/ProcurementPage";
 import Accounting from "./components/page/AccountingPage";
 import Appoved from "./components/page/ApprovedPage";
 import Expense from "./components/page/ExpenseManagementPage";
+import AccidentRecord from "./components/page/AccidentPage";
+import Distance from "./components/page/DistancePage";
+import MasterData from "./components/page/MasterDataPage";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
             <Route path="/accounting" element={<Accounting />} />
             <Route path="/approved" element={<Appoved/>} />
             <Route path="/expense_management" element={<Expense />}/>
+            <Route path="/accident_record" element={<AccidentRecord />} />
+            <Route path="/distance" element={<Distance />}/>
+            <Route path="/master" element={<MasterData />}/>
           </Routes>
         </div>
       </div>

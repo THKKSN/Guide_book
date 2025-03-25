@@ -42,38 +42,38 @@ const ManagementPage = () => {
       <p>3. Click "Save" to submit</p>
       <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100512.png" alt="" />
       <div className="under-pic">Figure 4: Expense Details View</div>
-<h5 id="method 2 : bulk import via excel">Method 2 : Bulk Import via Excel</h5>
-<strong>Step 1: Access Import Function</strong>
-<p>1. Click "Import" button in the Expense List</p>
-<p>2. System will display import interface</p>
-<img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100544.png" alt="" />
-<div className="under-pic">Figure 5: Import Button Location</div>
-<strong>Step 2: File Selection</strong>
-<p>1. Click to browse or drag and drop your Excel file</p>
-<p>2. Select the appropriate Excel file containing expense data</p>
-<img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100608.png" alt="" />
-<div className="under-pic">Figure 6: File Selection Interface</div>
-<strong>Step 3: Review Imported Data</strong>
-<p>1. System will display preview of imported data</p>
-<p>2. Verify the information is correct</p>
-<p>3. Confirm import</p>
-<img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100634.png" alt="" />
-<div className="under-pic">Figure 7: Import Data Preview</div>
-<h3 id="excel-template format">Excel Template Format</h3>
-<p>For successful import, your Excel file should follow this format:</p>
-<img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_102607.png" alt="" />
-<div className="under-pic"> Figure 8: Excel Template Example</div>
-<p>Required columns :</p>
-<div className="data-detail">
-  <p>- Date</p>
-  <p>- Description</p>
-  <p>- Amount</p>
-  <p>- Category</p>
-  <p>- Additional Notes (optional)</p>
-</div>
-      <div className="flex justify-between gap-10">
+      <h5 id="method 2 : bulk import via excel">Method 2 : Bulk Import via Excel</h5>
+      <strong>Step 1: Access Import Function</strong>
+      <p>1. Click "Import" button in the Expense List</p>
+      <p>2. System will display import interface</p>
+      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100544.png" alt="" />
+      <div className="under-pic">Figure 5: Import Button Location</div>
+      <strong>Step 2: File Selection</strong>
+      <p>1. Click to browse or drag and drop your Excel file</p>
+      <p>2. Select the appropriate Excel file containing expense data</p>
+      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100608.png" alt="" />
+      <div className="under-pic">Figure 6: File Selection Interface</div>
+      <strong>Step 3: Review Imported Data</strong>
+      <p>1. System will display preview of imported data</p>
+      <p>2. Verify the information is correct</p>
+      <p>3. Confirm import</p>
+      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100634.png" alt="" />
+      <div className="under-pic">Figure 7: Import Data Preview</div>
+      <h3 id="excel-template format">Excel Template Format</h3>
+      <p>For successful import, your Excel file should follow this format:</p>
+      <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_102607.png" alt="" />
+      <div className="under-pic"> Figure 8: Excel Template Example</div>
+      <p>Required columns :</p>
+      <div className="data-detail">
+        <p>- Date</p>
+        <p>- Description</p>
+        <p>- Amount</p>
+        <p>- Category</p>
+        <p>- Additional Notes (optional)</p>
+      </div>
+      <div className="div-button">
         <BackButton text="Back" subtext="Approved" onClick={() => navigate("/approved")} />
-        <NextButton text="Next" subtext="Accident Record" onClick={() => navigate("/accident")} />
+        <NextButton text="Next" subtext="Accident Record" onClick={() => navigate("/accident_record")} />
       </div>
     </div>
   );

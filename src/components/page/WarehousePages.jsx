@@ -155,7 +155,7 @@ const Warehouse = () => {
       <p>5. Tire Date :</p>
       <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_19-2-2025_10710_localhost.jpeg" alt="" />
       <div className="under-pic">Figure 21:Tire Date</div>
-      <div className="flex justify-between gap-10">
+      <div className="div-button">
         <BackButton text="Back" subtext="Maintenance" onClick={() => navigate("/maintenance")} />
         <NextButton text="Next" subtext="Procurement" onClick={() => navigate("/procurement")} />
       </div>

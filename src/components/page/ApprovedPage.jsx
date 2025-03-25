@@ -73,7 +73,7 @@ const Appovedpage = () => {
             </div>
             <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_100309.png" alt="" />
             <div className="under-pic">Figure 4: Payment Approval List</div>
-            <div className="flex justify-between gap-10">
+            <div className="div-button">
                 <BackButton text="Back" subtext="Accounting" onClick={() => navigate("/accounting")} />
                 <NextButton text="Next" subtext="Expense Management" onClick={() => navigate("/expense_management")} />
             </div>

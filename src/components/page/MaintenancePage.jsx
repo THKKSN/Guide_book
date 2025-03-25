@@ -45,7 +45,7 @@ const Maintenance = () => {
       <p>Job Order status updates to indicate completion</p>
       <img src="http://webserv.thipparath.com/documents-api/public/uploads/screenshot_2024-11-13_092113.png" alt="" />
       <div className="under-pic">Figure 13: Final Completion Status</div>
-      <div className="flex justify-between gap-10">
+      <div className="div-button">
         <BackButton text="Back" subtext="SMMS User Guide" onClick={() => navigate("/")} />
         <NextButton text="Next" subtext="Warehouse" onClick={() => navigate("/warehouse")} />
       </div>
