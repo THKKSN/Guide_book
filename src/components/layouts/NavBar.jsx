@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaWarehouse, FaBookOpen, FaTools  } from "react-icons/fa";
-import { IoDocumentSharp } from "react-icons/io5";
 import DarkModeToggle from "../functions/DarkModeToggle";
 import { HiDocumentCurrencyDollar,HiDocumentCheck } from "react-icons/hi2";
 import { SiExpensify } from "react-icons/si";
-import { FaTruckMoving, FaDatabase,FaCarBurst } from "react-icons/fa6";
+import { FaTruckMoving, FaDatabase,FaCarBurst, FaFilePowerpoint } from "react-icons/fa6";
 
 
 const Navbar = () => {
@@ -43,7 +42,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/procurement" onClick={handleClickGoTop} className="flex items-center space-x-2">
-                <IoDocumentSharp /> <span>Procurement</span>
+                <FaFilePowerpoint /> <span>Procurement</span>
               </Link>
             </li>
             <li>
